@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>final act of love</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="cake-chamber">
+      <!-- SVG cake – monument of a promise, rebuilt -->
+      <svg id="promise-cake" version="1.1" x="0px" y="0px" width="280px" height="500px" viewBox="0 0 200 500" xml:space="preserve">
+        <defs>
+          <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+            <feMerge>
+              <feMergeNode in="offsetblur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+          <!-- subtle grain for the flame -->
+          <filter id="flame-grain" x="0%" y="0%" width="100%" height="100%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="1" result="noise"/>
+            <feComposite in="SourceGraphic" in2="noise" operator="arithmetic" k1="0" k2="0.8" k3="0.2" k4="0"/>
+          </filter>
+        </defs>
+        <!-- cake layers (desaturated, earthen) -->
+        <path fill="#3a2c1f" d="M173.667,427.569c-49.795,0-101.101,0-147.334,0c-3.999,0-4-16.002,0-16.002c46.385,0,97.539,0,147.334,0C177.668,411.567,177.667,427.569,173.667,427.569z"/>
+        <path fill="#2b1e14" d="M102.242,427.569c5.348,0,14.079,0,17.462,0c0,0,17.026,0,27.504,0c19.143,0,20.39-3.797,26.459,0c3,1.877,0,7.823,0,7.823c-2.412,2.258-58.328,0-73.667,0l0,0c-1.858,0-67.187,0-73.667,0c0,0-4.125-4.983,0-7.823c5.201-3.58,16.085,0,23.725,0c8.841,0,20.762,0,20.762,0c3.686,0,8.597,0,19.511,0H102.242z"/>
+        <path fill="#3a2c1f" d="M173.667,451.394c-49.298,0-102.782,0-147.334,0c-3.999,0-4-16.002,0-16.002c44.697,0,96.586,0,147.334,0C177.667,435.392,177.668,451.394,173.667,451.394z"/>
+        <path fill="#1e1610" d="M173.667,451.394c2.875,0,2.997,9.257,0,9.131c-22.662-0.956-32.09-0.956-41.756-0.956c-14.48,0-17.884,0-30.163,0c-2.087,0-2.068,0-3.915,0c-13.333,0-8.963,0-23.088,0c-11.668,0-34.99-0.294-48.412,1.831c-4.109,0.65-3.01-10.006,0-10.006C37.129,451.394,149.379,451.394,173.667,451.394z"/>
+        <path fill="#2a2a2a" d="M173.667,475.571c-46.512,0-105.486,0-147.334,0c-3.999,0-4-16.002,0-16.002c43.566,0,97.96,0,147.334,0C177.667,459.569,177.666,475.571,173.667,475.571z"/>
+        <path fill="#b89b6b" d="M111.547,415.233c-6.667-0.834-9.667,4.667-13.833,3.333c-19.649-6.291-8.158,22.176-14.5,22.334c-6.667,0.166,2.833-18-13.333-22.167c-29.544-7.615-9.667,43.833-20.167,43.833c-10.333,0,8.004-55.006-16.833-39c-7.5,4.833-9.508-3.78-9.299-7.004c0.799-12.329,23.592-7.153,38.132-7.329c10.234-0.124,20.238-1.505,38.287-2.167c16.642-0.61,32.903,1.125,46.213,1.5c12.438,0.351,35.058-5.579,31.863,6.451c-5.532,20.833,1.25,28.216-4.409,27.883c-7.606-0.447-6.058-37.895-20.62-23.333c-10.167,10.166-15.972-0.747-25,12C119.547,443.568,121.798,416.515,111.547,415.233z"/>
+        <rect x="10" y="475.571" fill="#1f1f1f" width="180" height="4"/>
+
+        <!-- CANDLE – singular, steadfast -->
+        <g id="candle" transform="translate(100, 390)">
+          <rect x="-2.8" y="-50" width="5.6" height="50" rx="2.5" fill="#4a4a4a"/>
+          <!-- FLAME – the only colour, now with grain and life -->
+          <circle cx="0" cy="-55" r="4.8" fill="#ffaa33" filter="url(#glow) url(#flame-grain)" class="flame-core">
+            <animate attributeName="r" values="4.5;5.3;4.5" dur="0.5s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.92;1;0.92" dur="0.7s" repeatCount="indefinite" />
+            <animate attributeName="cy" values="-55.5;-54.5;-55.5" dur="0.3s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="0" cy="-55" r="2.2" fill="#ffe682" class="flame-inner">
+            <animate attributeName="r" values="2.0;2.6;2.0" dur="0.3s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      </svg>
+    </div>
+
+    <div class="vow">
+      <p class="line">as a final act of love</p>
+      <p class="line">i will never reach out again</p>
+      <p class="line">but i will become everything i told you about</p>
+      <p class="line">i won’t chase you</p>
+      <p class="line">i won’t beg for your closure</p>
+      <p class="line break">instead i will pour all that love into myself</p>
+      <p class="line">i will build the life i promised to build with you</p>
+      <p class="line">and maybe one day</p>
+      <p class="line">you will hear my name</p>
+      <p class="line">and you’ll realise</p>
+      <p class="line last">what walked away from you</p>
+    </div>
+  </div>
+
+  <!-- AUDIO – your voice, waiting to be heard -->
+  <audio id="bg-audio" preload="auto" loop>
+    <source src="Voice.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
